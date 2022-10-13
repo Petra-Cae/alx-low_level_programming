@@ -9,11 +9,13 @@ int main(void)
 	int a;
 	float b;
 	char c;
-	double d;
+	long int d;
+	long long int e;
 
 	printf("Size of int: %d bytes\n", sizeof(a));
 	printf("Size of float: %d bytes\n", sizeof(b));
 	printf("Size of char: %d bytes\n", sizeof(c));
-	printf("Size of double: %d bytes\n", sizeof(d));
+	printf("Size of long int: %d bytes\n", sizeof(d));
+	printf("Size of long long int: %d bytes\n", sizeof(e));
 	return (0);
 }
