@@ -9,12 +9,9 @@ int main(void)
 {
 	int t;
 
-	n = 0;
-	while (t < 10)
-	{
-		printf(t);
-		t++;
-	}
+	t = 0;
+	for (t < 10; t++)
+		printf("%d", t);
 	printf('\n');
 	return (0);
 }
