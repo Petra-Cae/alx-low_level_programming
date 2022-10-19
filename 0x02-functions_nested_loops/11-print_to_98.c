@@ -4,6 +4,7 @@
 /**
  *print_to_98 - Prints up to 98 natural numbers
  *
+ *@n: interger
  *Return: void
  */
 void print_to_98(int n)
