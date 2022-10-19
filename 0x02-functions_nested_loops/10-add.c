@@ -6,7 +6,7 @@
  *
  * Return: num plus nm
  */
-int add(num, nm)
+int add(int num, int nm)
 {
 	int sum;
 
