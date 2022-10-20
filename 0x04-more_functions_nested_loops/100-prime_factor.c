@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 /**
-*main - Largest prime factor
+* main - Largest prime factor
+*
+* Return: 0
 */
 int main(void)
 {
