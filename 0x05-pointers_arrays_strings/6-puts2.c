@@ -11,10 +11,10 @@ void puts2(char *str)
 {
 	int n = 0;
 
-	n = n + 2;
 	while (*(str + n))
 	{
 		_putchar(*(str + n));
+		n = n + 2;
 	}
 	_putchar('\n');
 }
