@@ -15,13 +15,13 @@ void rev_string(char *s)
 
 	while (*(s + l))
 	{
-		*(s + l) = *(s + l);
+		*(string + l) = *(s + l);
 		l++;
 	}
 	l = l - 1;
 	while (l >= 0)
 	{
-		*(s + l) = *(s + c);
+		*(s + l) = *(string + c);
 		c++;
 		l--;
 	}
