@@ -10,9 +10,7 @@ char *cap_string(char *string)
 {
 	int a;
 	int b;
-	char *c;
-
-	c[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	char c[] = " \t\n,;.!?\"(){}";
 
 	while (*(string + a))
 	{
