@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* new_dog - creates a new dog
+* new_dog - creates a new struct dog
 * @name: dog's name
 * @age: dog's age
 * @owner: dog's owner
@@ -11,12 +11,11 @@
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int a, b, d;
+	int a, b, d;
 	dog_t *doggo;
 
 	for (a = 0; name[a]; a++)
 		;
-
 	for (b = 0; owner[b]; b++)
 		;
 
@@ -25,7 +24,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	doggo->name = malloc(a * sizeof(doggo->name));
-	if (doggo->name == NULL)
+	if (doggo == NULL)
 		return (NULL);
 	for (d = 0; d < a; d++)
 		doggo->name[d] = name[d];
@@ -33,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggo->age = age;
 
 	doggo->owner = malloc(b * sizeof(doggo->owner));
-	if (doggo->owner == NULL)
+	if (doggo == NULL)
 		return (NULL);
 	for (d = 0; d < b; d++)
 		doggo->owner[d] = owner[d];
