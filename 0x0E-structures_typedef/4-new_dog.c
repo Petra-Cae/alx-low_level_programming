@@ -1,41 +1,47 @@
-#include "dog.h"
 #include <stdlib.h>
-
+#include "dog.h"
 /**
 * new_dog - creates a new struct dog
-* @name: dog's name
-* @age: dog's age
-* @owner: dog's owner
+* @name: name of dog
+* @age: age of dog
+* @owner: owner of dog
 *
-* Return: pointer to dog or null
+* Return: pointer to a new dog
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int a, b, d;
+	unsigned int a, b, i;
 	dog_t *doggo;
 
-	for (a = 0; name[a]; a++)
-		;
-	for (b = 0; owner[b]; b++)
-		;
-
+	if (name == NULL || owner == NULL)
+		return (NULL);
 	doggo = malloc(sizeof(dog_t));
 	if (doggo == NULL)
 		return (NULL);
-
-	doggo->name = malloc(a * sizeof(doggo->name));
-	if (doggo == NULL)
+	for (a = 0; name[a]; a++)
+		;
+	doggo->name = malloc(a * sizeof(char));
+	if (doggo->name == NULL)
+	{
+		free(doggo);
 		return (NULL);
-	for (d = 0; d < a; d++)
-		doggo->name[d] = name[d];
+	}
+	for (i = 0; i < a; i++)
+		doggo->name[i] = name[i];
 
 	doggo->age = age;
 
-	doggo->owner = malloc(b * sizeof(doggo->owner));
-	if (doggo == NULL)
+	for (b = 0; owner[b]; b++)
+		;
+	doggo->owner = malloc(b * sizeof(char));
+	if (doggo->owner == NULL)
+	{
+		free(doggo->name);
+		free(doggo);
 		return (NULL);
-	for (d = 0; d < b; d++)
-		doggo->owner[d] = owner[d];
+	}
+	for (i = 0; i < b; i++)
+		doggo->owner[i] = owner[i];
 
 	return (doggo);
 }
