@@ -6,7 +6,7 @@
 * @argc: the number of arguments
 * @argv: array of pointers to the arguments
 *
-* Return: 0 (success)
+* Return: 0 (success) else 98 or 99 (fail)
 */
 int main(int argc, char *argv[])
 {
@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 	y = atoi(argv[3]);
 
 	opr = get_op_func(argv[2]);
+
 	if (opr == NULL)
 	{
 		printf("Error\n");
