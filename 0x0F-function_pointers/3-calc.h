@@ -1,6 +1,8 @@
 #ifndef _3_CALC_H
 #define _3_CALC_H
+
 #include <stdlib.h>
+
 /**
 * struct op - structure of the function
 * @op: the operators i.e. (-, +, *, /, %)
