@@ -7,12 +7,13 @@ void print_all(const char * const format, ...)
 {
 	va_list strlist;
 	char *mystr;
-	unsigned int a = 0, b = 0, c = 0;
+	unsigned int a = 0, b, c = 0;
 	const char args[] = "cifs";
 
 	va_start(strlist, format);
 	while (format && format[a])
 	{
+		b = 0;
 		while (args[b])
 		{
 			if (format[a] == args[b] && c)
