@@ -14,11 +14,11 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 
-	va_start (numlist, n);
+	va_start(numlist, n);
 
 	while (a++ < n)
-		sum += va_arg (numlist, int);
+		sum += va_arg(numlist, int);
 
-	va_end (numlist);
+	va_end(numlist);
 	return (sum);
 }
