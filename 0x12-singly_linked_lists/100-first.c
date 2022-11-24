@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) primero(void);
+void primero(void) __attribute__ ((constructor));
 /**
 * primero - print this before the main function
 */
