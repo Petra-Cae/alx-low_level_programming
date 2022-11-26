@@ -2,4 +2,4 @@
 
 ## Programming in C
 
-The following are done exercises done during the ALX Software Engineering Programme
+The following are exercises done during the ALX Software Engineering Programme
